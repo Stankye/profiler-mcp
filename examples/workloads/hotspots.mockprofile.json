@@ -1,0 +1,33 @@
+{
+  "_comment": "Mock-profiler sidecar model for the hotspots workload. When the mock vtune/AMDuProfCLI profiles a binary, it looks for <binary>.mockprofile.json next to it. Weights are relative sample shares; cpi and cache_miss_rate shade synthetic uarch metrics. 'scenarios' override 'functions' when every string in when_args_include appears in the target argv. Deterministic: no randomness anywhere.",
+  "module": "hotspots",
+  "functions": {
+    "hot_compute": { "weight": 50, "cpi": 0.55, "cache_miss_rate": 0.002, "branch_miss_rate": 0.001, "source_file": "hotspots.c" },
+    "hot_memory":  { "weight": 30, "cpi": 3.8,  "cache_miss_rate": 0.31,  "branch_miss_rate": 0.002, "source_file": "hotspots.c" },
+    "hot_branch":  { "weight": 20, "cpi": 1.6,  "cache_miss_rate": 0.004, "branch_miss_rate": 0.18,  "source_file": "hotspots.c" },
+    "main":        { "weight": 1,  "cpi": 1.0,  "cache_miss_rate": 0.01,  "branch_miss_rate": 0.01,  "source_file": "hotspots.c" }
+  },
+  "scenarios": [
+    {
+      "when_args_include": ["--only", "compute"],
+      "functions": {
+        "hot_compute": { "weight": 95, "cpi": 0.55, "cache_miss_rate": 0.002, "branch_miss_rate": 0.001, "source_file": "hotspots.c" },
+        "main":        { "weight": 5,  "cpi": 1.0,  "cache_miss_rate": 0.01,  "branch_miss_rate": 0.01,  "source_file": "hotspots.c" }
+      }
+    },
+    {
+      "when_args_include": ["--only", "memory"],
+      "functions": {
+        "hot_memory": { "weight": 95, "cpi": 3.8, "cache_miss_rate": 0.31, "branch_miss_rate": 0.002, "source_file": "hotspots.c" },
+        "main":       { "weight": 5,  "cpi": 1.0, "cache_miss_rate": 0.01, "branch_miss_rate": 0.01,  "source_file": "hotspots.c" }
+      }
+    },
+    {
+      "when_args_include": ["--only", "branch"],
+      "functions": {
+        "hot_branch": { "weight": 95, "cpi": 1.6, "cache_miss_rate": 0.004, "branch_miss_rate": 0.18, "source_file": "hotspots.c" },
+        "main":       { "weight": 5,  "cpi": 1.0, "cache_miss_rate": 0.01,  "branch_miss_rate": 0.01, "source_file": "hotspots.c" }
+      }
+    }
+  ]
+}

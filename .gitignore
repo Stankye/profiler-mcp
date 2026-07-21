@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+dist/
+build/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Profiler artifacts
+results/
+r[0-9][0-9][0-9]*/
+*.caperf
+*.db
+AMDuProf-*/
+
+# OS
+.DS_Store
+
+# workload build artifacts
+examples/workloads/hotspots
+*.dSYM/

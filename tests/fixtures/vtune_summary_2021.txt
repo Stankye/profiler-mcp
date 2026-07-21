@@ -1,0 +1,33 @@
+    CPU Time: 7.410s
+        Effective Time: 7.410s
+            Idle: 0s
+            Poor: 7.410s
+            Ok: 0s
+            Ideal: 0s
+            Over: 0s
+        Spin Time: 0s
+        Overhead Time: 0s
+    Total Thread Count: 4
+    Paused Time: 0s
+
+Top Hotspots
+Function                                                                       Module          CPU Time
+-----------------------------------------------------------------------------  --------------  --------
+PageRankPullGS._omp_fn.1                                                       pr                5.678s
+std::istream::operator>>                                                       libstdc++.so.6    0.912s
+func@0x18e20                                                                   libgomp.so.1      0.210s
+BuilderBase<int, int, int, (bool)1>::MakeCSR._omp_fn.14                        pr                0.158s
+std::__introsort_loop<int*, long, __gnu_cxx::__ops::_Iter_less_iter>.isra.236  pr                0.116s
+[Others]                                                                       N/A               0.337s
+Effective Physical Core Utilization: 6.3% (2.755 out of 44)
+ | The metric value is low, which may signal a poor physical CPU cores
+ | utilization caused by:
+ |     - load imbalance
+ |     - threading runtime overhead
+ |     - contended synchronization
+ |     - thread/process underutilization
+ |     - incorrect affinity that utilizes logical cores instead of physical
+ |       cores
+ | Explore sub-metrics to estimate the efficiency of MPI and OpenMP parallelism
+ | or run the Locks and Waits analysis to identify parallel bottlenecks for
+ | other parallel runtimes.

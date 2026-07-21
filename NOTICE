@@ -1,0 +1,12 @@
+profiler-mcp
+
+The AMD uProf invocation pattern and collect-stdout contract (the
+"Generated data files path:" / "Generated report file:" lines and the
+`profile --config hotspots` one-shot flow) were learned from the uprof_mcp
+component of AMDResearch/intellikit (https://github.com/AMDResearch/intellikit),
+MIT License, Copyright (c) 2025-2026 Advanced Micro Devices, Inc.
+This project re-implements that behavior independently; no intellikit code is vendored.
+
+Verbatim profiler output samples used as test fixtures were captured from
+publicly available repositories and documentation; provenance for each is
+recorded in docs/research/captures-vtune.md and docs/research/captures-uprof.md.

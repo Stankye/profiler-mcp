@@ -1,0 +1,37 @@
+Elapsed Time: 1.307s
+    CPU Time: 16.663s
+        Effective Time: 16.663s
+        Spin Time: 0s
+        Overhead Time: 0s
+    Total Thread Count: 16
+    Paused Time: 0s
+
+Top Hotspots
+Function             Module        CPU Time  % of CPU Time(%)
+-------------------  ------------  --------  ----------------
+func@0x1fe10         libgomp.so.1    6.021s             36.1%
+func@0x1fc70         libgomp.so.1    5.452s             32.7%
+heat_flow._omp_fn.0  heat_flow       4.460s             26.8%
+func@0x1e860         libgomp.so.1    0.360s              2.2%
+GOMP_parallel        libgomp.so.1    0.350s              2.1%
+[Others]             N/A             0.020s              0.1%
+Collection and Platform Info
+    Application Command Line: ./heat_flow "2048" "16" 
+    Operating System: 5.14.0-362.13.1.el9_3.x86_64 \S Kernel \r on an \m 
+    Computer Name: d0143
+    Result Size: 4.0 MB 
+    Collection start time: 03:04:15 09/04/2026 UTC
+    Collection stop time: 03:04:17 09/04/2026 UTC
+    Collector Type: User-mode sampling and tracing
+    CPU
+        Name: Unknown
+        Frequency: 1.996 GHz
+        Logical CPU Count: 128
+        Cache Allocation Technology
+            Level 2 capability: not detected
+            Level 3 capability: available
+
+If you want to skip descriptions of detected performance issues in the report,
+enter: vtune -report summary -report-knob show-issues=false -r <my_result_dir>.
+Alternatively, you may view the report in the csv format: vtune -report
+<report_name> -format=csv.

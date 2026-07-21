@@ -1,0 +1,4 @@
+Function	CPU Time	CPU Time:Effective Time	CPU Time:Spin Time	CPU Time:Overhead Time	Module	Function (Full)	Source File	Start Address
+ComputeSYMGS_ref	47.479808	47.479808	0.0	0.0	xhpcg	ComputeSYMGS_ref(SparseMatrix_STRUCT const&, Vector_STRUCT const&, Vector_STRUCT&)	[Unknown]	0x27180
+ComputeSPMV_ref	19.070656	19.070656	0.0	0.0	xhpcg	ComputeSPMV_ref(SparseMatrix_STRUCT const&, Vector_STRUCT&, Vector_STRUCT&)	[Unknown]	0x26f90
+ComputeDotProduct_ref	1.391727	1.391727	0.0	0.0	xhpcg	ComputeDotProduct_ref(int, Vector_STRUCT const&, Vector_STRUCT const&, double&, double&)	[Unknown]	0x25900

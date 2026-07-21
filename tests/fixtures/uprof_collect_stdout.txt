@@ -1,0 +1,11 @@
+/opt/amd/software/amduprof/5.0.1479/bin/AMDuProfCLI
+Profiling started
+
+** ArgonMD **
+
+ Box Units : 5    5    5  
+ No. Time Steps : 10000
+[... application stdout ...]
+ Loop Clock Time [s] :      7.211
+Profiling (data collection) completed 
+Generated data files path: /home/mdelapierre/proj/bmkg/amd-profiling/dir_amduprof_o2_gcc_hotspots/AMDuProf-argonmd_o2_gcc-Hotspots_Jun-09-2025_15-35-29

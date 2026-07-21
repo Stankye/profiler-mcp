@@ -1,0 +1,57 @@
+
+"AMD uProf (Version:5.0.1479.0)"
+PERFORMANCE ANALYSIS REPORT
+
+EXECUTION
+Target Path:,"./argonmd_o2_gcc.x"
+Command Line Arguments:
+Working Directory:,"/home/mdelapierre/proj/bmkg/amd-profiling"
+Environment Variables:
+CPU Details:,"Family(0x19), Model(0x44), Number of Cores(12)"
+Operating System:,"Linux Ubuntu 24.04.1 LTS-64 Kernel:6.11.0-25-generic"
+Collect Command:,"./AMDuProfCLI collect --config hotspots -g -o dir_amduprof_o2_gcc_hotspots ./argonmd_o2_gcc.x"
+Report Command:,"./AMDuProfCLI report -i dir_amduprof_o2_gcc_hotspots/AMDuProf-argonmd_o2_gcc-Hotspots_Jun-09-2025_15-35-29"
+
+PROFILE DETAILS
+Profile Session Type:,"Hotspots"
+Profile Scope:,"Single Application"
+CPU Mask:,"0-11"
+CPU Affinity Mask:,"0-11"
+Profile Start Time:,"Mon Jun  9 15:35:29 2025"
+Profile End Time:,"Mon Jun  9 15:35:35 2025"
+Profile Duration:,"5.960 seconds"
+Data Folder:,"/home/mdelapierre/proj/bmkg/amd-profiling/dir_amduprof_o2_gcc_hotspots/AMDuProf-argonmd_o2_gcc-Hotspots_Jun-09-2025_15-35-29"
+Virtual Machine:,"No"
+Timer Interval:,"10ms"
+Profiling Signal:,"27"
+Call Stack Sampling:,"True"
+Call Stack Overcome frame-pointer omission:,"False"
+Call Stack Unwind Depth:,"32"
+Selected View:,"Time based hotspots"
+
+MONITORED EVENTS
+TBP Events:,Name,Interval,Description
+,"CPU_TIME","10.000 milliseconds","CPU Time is the time in which the CPU core is executing the code."
+
+
+APPLICATION PERFORMANCE SNAPSHOT
+Number Of Threads,"1"
+
+
+"10 HOTTEST FUNCTIONS (Sort Event - CPU_TIME)"
+FUNCTION,"CPU_TIME" (seconds),Inclusive Time (seconds),Module
+"compute_forc_epot(double const*, int, int, int const*, int const*, double const*, double const*, double, double, double, double*, double&)",4.3600,4.3600,"/home/mdelapierre/proj/bmkg/linux-profiling/argonmd_o2.x"
+"compute_neigh(double const*, int, double const*, double const*, double, int, int*, int*)",1.0300,1.0300,"/home/mdelapierre/proj/bmkg/linux-profiling/argonmd_o2.x"
+"update_pos_pbc(double*, double*, double const*, double const*, int, double, double, double, double const*)",0.0100,0.0100,"/home/mdelapierre/proj/bmkg/linux-profiling/argonmd_o2.x"
+
+"10 HOTTEST PROCESSES (Sort Event - CPU_TIME)"
+PROCESS,"CPU_TIME" (seconds)
+"argonmd_o2_gcc. (PID:666509)",5.4000
+
+"10 HOTTEST MODULES (Sort Event - CPU_TIME)"
+MODULE,"CPU_TIME" (seconds)
+"/home/mdelapierre/proj/bmkg/linux-profiling/argonmd_o2.x",5.4000
+
+"10 HOTTEST THREADS (Sort Event - CPU_TIME)"
+THREAD,THREAD ID,"CPU_TIME" (seconds)
+"argonmd_o2_gcc. (PID:666509)","666509",5.4000

@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "vtune": {
+      "command": "uv",
+      "args": ["run", "vtune-mcp"],
+      "env": {
+        "PROFILER_MCP_MODE": "${PROFILER_MCP_MODE:-auto}"
+      }
+    },
+    "uprof": {
+      "command": "uv",
+      "args": ["run", "uprof-mcp"],
+      "env": {
+        "PROFILER_MCP_MODE": "${PROFILER_MCP_MODE:-auto}"
+      }
+    }
+  }
+}
